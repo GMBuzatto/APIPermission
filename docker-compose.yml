@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  apipermission:
+    image: ${DOCKER_REGISTRY-}apipermission
+    build:
+      context: .
+      dockerfile: APIPermission/Dockerfile
+    ports:
+      - "8080:8080" 
+    depends_on:
+      - mongo
+      - redis
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db  
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"  
+
+volumes:
+  mongodb_data:
