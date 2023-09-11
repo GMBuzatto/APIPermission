@@ -35,12 +35,12 @@ Antes de executar o projeto, certifique-se de ter as seguintes ferramentas e rec
 Siga as etapas abaixo para executar o projeto em sua máquina local:
 
 1. Clone este repositório:
-
+   Utilizando o terminal prompt de comando ou bash:
    ```bash
    git clone https://github.com/GMBuzatto/APIPermission.git
    ```
 2. Utilizando o Docker Desktop:
-
+   Utilizando o terminal prompt de comando ou bash:
    ```bash
      docker pull mongo
    ```
